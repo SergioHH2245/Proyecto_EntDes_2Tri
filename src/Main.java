@@ -34,10 +34,20 @@ public class Main {
                     restar(rest1, rest2);
                     break;
                 case "3":
-                    multiplicar();
+                    System.out.println(" -3: MULTIPLICAR- ");
+                    System.out.println("INTRODUCE LA PRIMERA CIFRA");
+                    double mult1 = sc.nextDouble();
+                    System.out.println("AHORA INTRODUCE LA SEGUNDA CIFRA");
+                    double mult2 = sc.nextDouble();
+                    multiplicar(mult1, mult2);
                     break;
                 case "4":
-                    dividir();
+                    System.out.println(" -4: DIVIDIR- ");
+                    System.out.println("INTRODUCE LA PRIMERA CIFRA");
+                    double div1 = sc.nextDouble();
+                    System.out.println("AHORA INTRODUCE LA CIFRA POR LA QUE QUIERES DIVIDIR A LA PRIMERA");
+                    double div2 = sc.nextDouble();
+                    dividir(div1, div2);
                     break;
                 case "0":
                     System.out.println(" -SALIR- ");
@@ -76,23 +86,15 @@ public class Main {
         return resta;
     }
 
-    public static double multiplicar() {
-        System.out.println(" -3: MULTIPLICAR- ");
-        System.out.println("INTRODUCE LA PRIMERA CIFRA");
-        double mult1 = sc.nextDouble();
-        System.out.println("AHORA INTRODUCE LA SEGUNDA CIFRA");
-        double mult2 = sc.nextDouble();
+    public static double multiplicar(double mult1, double mult2) {
+
         double multiplicacion = mult1 * mult2;
         System.out.println("EL RESULTADO ES: " + multiplicacion);
         return multiplicacion;
     }
 
-    public static double dividir() {
-        System.out.println(" -4: DIVIDIR- ");
-        System.out.println("INTRODUCE LA PRIMERA CIFRA");
-        double div1 = sc.nextDouble();
-        System.out.println("AHORA INTRODUCE LA CIFRA POR LA QUE QUIERES DIVIDIR A LA PRIMERA");
-        double div2 = sc.nextDouble();
+    public static double dividir(double div1, double div2) {
+
         if (div2 == 0) {
             double division = 0;
             System.out.println("EL RESULTADO ES: " + division);
