@@ -53,7 +53,26 @@ class MainTest {
 
     @org.junit.jupiter.api.Test
     void multiplicar() {
+        double mult1 = 8;
+        double mult2 = 3;
+        double expResult = 24.0;
+        double result = Main.multiplicar(mult1, mult2);
+        assertEquals(expResult, result);
+
+        mult1 = 40;
+        mult2 = 2;
+        expResult = 80.0;
+        result = Main.multiplicar(mult1, mult2);
+        assertEquals(expResult, result);
+
     }
+
+    @ParameterizedTest(name = "Si la primera cifra es {0} y la segunda es {1}, el resultado es {2} ")
+    @CsvSource({"3.14, 15, 47.1"})
+    void pruebaMultiplicacion(double mult1, double mult2, double expRresult) {
+        assertEquals(expRresult, Main.multiplicar(mult1,mult2), 0.1);
+    }
+
 
     @org.junit.jupiter.api.Test
     void dividir() {
