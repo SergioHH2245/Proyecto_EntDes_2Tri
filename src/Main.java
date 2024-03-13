@@ -20,6 +20,9 @@ public class Main {
                 case "1":
                     sumar();
                     break;
+                case "2":
+                    restar();
+                    break;
             }
         } while (!opcion.equals("0"));
 
@@ -45,6 +48,16 @@ public class Main {
         double sum2 = sc.nextDouble();
         double suma = sum1 + sum2;
         System.out.println("EL RESULTADO ES: " + suma);
+    }
+
+    public static void restar() {
+        System.out.println(" -2:RESTAR- ");
+        System.out.println("INTRODUCE LA PRIMERA CIFRA");
+        double rest1 = sc.nextDouble();
+        System.out.println("AHORA INTRODUCE LA CIFRA QUE LE QUIERES RESTAR A LA PRIMERA");
+        double rest2 = sc.nextDouble();
+        double resta = rest1 - rest2;
+        System.out.println("EL RESULTADO ES: " + resta);
     }
 
 }
