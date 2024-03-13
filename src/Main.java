@@ -23,6 +23,9 @@ public class Main {
                 case "2":
                     restar();
                     break;
+                case "3":
+                    multiplicar();
+                    break;
             }
         } while (!opcion.equals("0"));
 
@@ -60,4 +63,13 @@ public class Main {
         System.out.println("EL RESULTADO ES: " + resta);
     }
 
+    public static void multiplicar() {
+        System.out.println(" -3: MULTIPLICAR- ");
+        System.out.println("INTRODUCE LA PRIMERA CIFRA");
+        double mult1 = sc.nextDouble();
+        System.out.println("AHORA INTRODUCE LA SEGUNDA CIFRA");
+        double mult2 = sc.nextDouble();
+        double multiplicacion = mult1 * mult2;
+        System.out.println("EL RESULTADO ES: " + multiplicacion);
+    }
 }
