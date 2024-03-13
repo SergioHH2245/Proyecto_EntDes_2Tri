@@ -16,6 +16,11 @@ public class Main {
             mostrarMenu();
             opcion = sc.next();
             sc.nextLine();
+            switch (opcion) {
+                case "1":
+                    sumar();
+                    break;
+            }
         } while (!opcion.equals("0"));
 
 
@@ -31,4 +36,15 @@ public class Main {
         System.out.println(" -------------------------------- ");
         System.out.println("INTRODUCE OPCION: ");
     }
+
+    public static void sumar() {
+        System.out.println(" -1:SUMAR- ");
+        System.out.println("INTRODUCE LA PRIMERA CIFRA: ");
+        double sum1 = sc.nextDouble();
+        System.out.println("AHORA INTRODUCE LA SEGUNDA CIFRA: ");
+        double sum2 = sc.nextDouble();
+        double suma = sum1 + sum2;
+        System.out.println("EL RESULTADO ES: " + suma);
+    }
+
 }
