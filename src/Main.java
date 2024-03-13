@@ -1,5 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 /**
  * @author SergioHH_22
  */
@@ -71,7 +72,7 @@ public class Main {
     }
 
     /**
-     * Este metodo muestra el menu de la maquina
+     * Este metodo muestra el menu de la calculadora
      */
     public static void mostrarMenu() {
         System.out.println(" --------------CALCULADORA-------------- ");
@@ -136,7 +137,7 @@ public class Main {
      *
      * @param div1 La primera cifra
      * @param div2 La segunda cifra por la que divides a la primera
-     * @return El resultado de la división
+     * @return El resultado de la division
      */
     public static double dividir(double div1, double div2) {
 

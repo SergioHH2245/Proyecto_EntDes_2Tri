@@ -3,8 +3,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * En esta clase se comprobara el correcto funcionamiento de los metodos aplicados en la clase Main
+ */
 class MainTest {
-
+    /**
+     * 2 casos de pruebas para el metodo sumar
+     */
     @org.junit.jupiter.api.Test
     void sumar() {
         double sum1 = 10.0;
@@ -21,13 +26,22 @@ class MainTest {
 
     }
 
+    /**
+     * Prueba parametrizada para el metodo sumar
+     *
+     * @param sum1      La primera cifra
+     * @param sum2      La segunda cifra que sumas a la primera
+     * @param expResult El resultado esperado de la suma
+     */
     @ParameterizedTest(name = "Si la primera cifra es {0} y la segunda es {1}, el resultado es {2} ")
     @CsvSource({"5, 15, 20.0"})
-    void pruebaSuma(double sum1, double sum2, double expRresult) {
-        assertEquals(expRresult, Main.sumar(sum1, sum2), 0.1);
+    void pruebaSuma(double sum1, double sum2, double expResult) {
+        assertEquals(expResult, Main.sumar(sum1, sum2), 0.1);
     }
 
-
+    /**
+     * 2 casos de pruebas para el metodo restar
+     */
     @org.junit.jupiter.api.Test
     void restar() {
         double rest1 = 25.5;
@@ -44,13 +58,22 @@ class MainTest {
 
     }
 
+    /**
+     * Prueba parametrizada del metodo restar
+     *
+     * @param rest1     La primera cifra
+     * @param rest2     La segunda cifra la cual restas a la primera
+     * @param expResult El resultado esperado de la resta
+     */
     @ParameterizedTest(name = "Si la primera cifra es {0} y la segunda es {1}, el resultado es {2} ")
     @CsvSource({"96, 13, 83.0"})
     void pruebaResta(double rest1, double rest2, double expResult) {
         assertEquals(expResult, Main.restar(rest1, rest2), 0.1);
     }
 
-
+    /**
+     * 2 casos de pruebas para el metodo multiplicar
+     */
     @org.junit.jupiter.api.Test
     void multiplicar() {
         double mult1 = 8;
@@ -67,12 +90,22 @@ class MainTest {
 
     }
 
+    /**
+     * Prueba parametrizada para el metodo sumar
+     *
+     * @param mult1     La primera cifra
+     * @param mult2     La segunda cifra que multiplicas a la primera
+     * @param expResult El resultado esperado de la multiplicacion
+     */
     @ParameterizedTest(name = "Si la primera cifra es {0} y la segunda es {1}, el resultado es {2} ")
     @CsvSource({"3.14, 15, 47.1"})
-    void pruebaMultiplicacion(double mult1, double mult2, double expRresult) {
-        assertEquals(expRresult, Main.multiplicar(mult1, mult2), 0.1);
+    void pruebaMultiplicacion(double mult1, double mult2, double expResult) {
+        assertEquals(expResult, Main.multiplicar(mult1, mult2), 0.1);
     }
 
+    /**
+     * 2 casos de pruebas para el metodo dividir
+     */
     @org.junit.jupiter.api.Test
     void dividir() {
         double div1 = 54.0;
@@ -89,10 +122,17 @@ class MainTest {
 
     }
 
+    /**
+     * Prueba parametrizada para el metodo sumar
+     *
+     * @param div1      La primera cifra
+     * @param div2      La segunda cifra por la que divides a la primera
+     * @param expResult El resultado esperado de la division
+     */
     @ParameterizedTest(name = "Si la primera cifra es {0} y la segunda es {1}, el resultado es {2} ")
     @CsvSource({"14, 7, 2.0"})
-    void pruebaDivision(double div1, double div2, double expRresult) {
-        assertEquals(expRresult, Main.dividir(div1, div2), 0.1);
+    void pruebaDivision(double div1, double div2, double expResult) {
+        assertEquals(expResult, Main.dividir(div1, div2), 0.1);
     }
 
 
