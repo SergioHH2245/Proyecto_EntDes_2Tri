@@ -26,6 +26,15 @@ public class Main {
                 case "3":
                     multiplicar();
                     break;
+                case "4":
+
+                    break;
+                case "0":
+                    System.out.println(" -SALIR- ");
+                    System.out.println("¡HASTA LUEGO, USUARIO!");
+                    break;
+                default:
+                    System.out.println("OPCION NO VALIDA");
             }
         } while (!opcion.equals("0"));
 
