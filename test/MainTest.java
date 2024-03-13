@@ -70,10 +70,30 @@ class MainTest {
     @ParameterizedTest(name = "Si la primera cifra es {0} y la segunda es {1}, el resultado es {2} ")
     @CsvSource({"3.14, 15, 47.1"})
     void pruebaMultiplicacion(double mult1, double mult2, double expRresult) {
-        assertEquals(expRresult, Main.multiplicar(mult1,mult2), 0.1);
+        assertEquals(expRresult, Main.multiplicar(mult1, mult2), 0.1);
     }
 
+    @org.junit.jupiter.api.Test
+    void dividir() {
+        double div1 = 54.0;
+        double div2 = 2;
+        double expResult = 27.0;
+        double result = Main.dividir(div1, div2);
+        assertEquals(expResult, result);
 
+        div1 = 78;
+        div2 = 4;
+        expResult = 19.5;
+        result = Main.dividir(div1, div2);
+        assertEquals(expResult, result);
+
+    }
+
+    @ParameterizedTest(name = "Si la primera cifra es {0} y la segunda es {1}, el resultado es {2} ")
+    @CsvSource({"14, 7, 2.0"})
+    void pruebaDivision(double div1, double div2, double expRresult) {
+        assertEquals(expRresult, Main.dividir(div1, div2), 0.1);
+    }
 
 
 }
