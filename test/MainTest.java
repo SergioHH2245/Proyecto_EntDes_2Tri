@@ -8,7 +8,7 @@ class MainTest {
         double sum2=19.897;
         double expResult= 29.897;
         double result= Main.sumar(sum1, sum2);
-        assertEquals(expResult, result);
+        assertEquals(double expResult, double result);
 
     }
 
