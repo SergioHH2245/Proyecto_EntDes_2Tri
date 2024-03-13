@@ -27,7 +27,7 @@ public class Main {
                     multiplicar();
                     break;
                 case "4":
-
+                    dividir();
                     break;
                 case "0":
                     System.out.println(" -SALIR- ");
@@ -80,5 +80,22 @@ public class Main {
         double mult2 = sc.nextDouble();
         double multiplicacion = mult1 * mult2;
         System.out.println("EL RESULTADO ES: " + multiplicacion);
+    }
+
+    public static void dividir() {
+        System.out.println(" -4: DIVIDIR- ");
+        System.out.println("INTRODUCE LA PRIMERA CIFRA");
+        double div1 = sc.nextDouble();
+        System.out.println("AHORA INTRODUCE LA CIFRA POR LA QUE QUIERES DIVIDIR A LA PRIMERA");
+        double div2 = sc.nextDouble();
+        if (div2 == 0) {
+            double division = 0;
+            System.out.println("EL RESULTADO ES: " + division);
+
+        } else {
+            double division = div1 / div2;
+            System.out.println("EL RESULTADO ES: " + division);
+        }
+
     }
 }
