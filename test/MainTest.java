@@ -4,10 +4,16 @@ class MainTest {
 
     @org.junit.jupiter.api.Test
     void sumar() {
-        double sum1=10.0;
-        double sum2=19.897;
-        double expResult= 29.897;
-        double result= Main.sumar(sum1, sum2);
+        double sum1 = 10.0;
+        double sum2 = 19.897;
+        double expResult = 29.897;
+        double result = Main.sumar(sum1, sum2);
+        assertEquals(expResult, result);
+
+        sum1 = 43;
+        sum2 = 22;
+        expResult = 65.0;
+        result = Main.sumar(sum1, sum2);
         assertEquals(expResult, result);
 
     }
