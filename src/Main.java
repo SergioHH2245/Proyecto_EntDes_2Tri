@@ -18,10 +18,20 @@ public class Main {
             sc.nextLine();
             switch (opcion) {
                 case "1":
-                    sumar();
+                    System.out.println(" -1:SUMAR- ");
+                    System.out.println("INTRODUCE LA PRIMERA CIFRA: ");
+                    double sum1 = sc.nextDouble();
+                    System.out.println("AHORA INTRODUCE LA SEGUNDA CIFRA: ");
+                    double sum2 = sc.nextDouble();
+                    sumar(sum1, sum2);
                     break;
                 case "2":
-                    restar();
+                    System.out.println(" -2:RESTAR- ");
+                    System.out.println("INTRODUCE LA PRIMERA CIFRA");
+                    double rest1 = sc.nextDouble();
+                    System.out.println("AHORA INTRODUCE LA CIFRA QUE LE QUIERES RESTAR A LA PRIMERA");
+                    double rest2 = sc.nextDouble();
+                    restar(rest1, rest2);
                     break;
                 case "3":
                     multiplicar();
@@ -52,27 +62,21 @@ public class Main {
         System.out.println("INTRODUCE OPCION: ");
     }
 
-    public static void sumar() {
-        System.out.println(" -1:SUMAR- ");
-        System.out.println("INTRODUCE LA PRIMERA CIFRA: ");
-        double sum1 = sc.nextDouble();
-        System.out.println("AHORA INTRODUCE LA SEGUNDA CIFRA: ");
-        double sum2 = sc.nextDouble();
+    public static double sumar(double sum1, double sum2) {
+
         double suma = sum1 + sum2;
         System.out.println("EL RESULTADO ES: " + suma);
+        return suma;
     }
 
-    public static void restar() {
-        System.out.println(" -2:RESTAR- ");
-        System.out.println("INTRODUCE LA PRIMERA CIFRA");
-        double rest1 = sc.nextDouble();
-        System.out.println("AHORA INTRODUCE LA CIFRA QUE LE QUIERES RESTAR A LA PRIMERA");
-        double rest2 = sc.nextDouble();
+    public static double restar(double rest1, double rest2) {
+
         double resta = rest1 - rest2;
         System.out.println("EL RESULTADO ES: " + resta);
+        return resta;
     }
 
-    public static void multiplicar() {
+    public static double multiplicar() {
         System.out.println(" -3: MULTIPLICAR- ");
         System.out.println("INTRODUCE LA PRIMERA CIFRA");
         double mult1 = sc.nextDouble();
@@ -80,9 +84,10 @@ public class Main {
         double mult2 = sc.nextDouble();
         double multiplicacion = mult1 * mult2;
         System.out.println("EL RESULTADO ES: " + multiplicacion);
+        return multiplicacion;
     }
 
-    public static void dividir() {
+    public static double dividir() {
         System.out.println(" -4: DIVIDIR- ");
         System.out.println("INTRODUCE LA PRIMERA CIFRA");
         double div1 = sc.nextDouble();
@@ -91,10 +96,12 @@ public class Main {
         if (div2 == 0) {
             double division = 0;
             System.out.println("EL RESULTADO ES: " + division);
+            return division;
 
         } else {
             double division = div1 / div2;
             System.out.println("EL RESULTADO ES: " + division);
+            return division;
         }
 
     }
